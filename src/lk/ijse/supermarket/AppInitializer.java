@@ -17,7 +17,7 @@ public class AppInitializer {
         Transaction transaction = session.beginTransaction();
 
         //save items
-        //session.save(item1);
+        session.save(item1);
 
         //update item
         //session.update(item1);
@@ -33,10 +33,10 @@ public class AppInitializer {
 
         // delete items seconds pattens
 
-        Item item = new Item();
+  /*      Item item = new Item();
         item.setCode("I001");
         session.delete(item);
-
+*/
 
         transaction.commit();
         session.close();

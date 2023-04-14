@@ -53,4 +53,14 @@ public class Item {
     public void setQty(int qty) {
         this.qty = qty;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "code='" + code + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", qty=" + qty +
+                '}';
+    }
 }

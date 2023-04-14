@@ -11,9 +11,10 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration(){
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Item.class);
+         sessionFactory = configuration.buildSessionFactory();
     }
     public static FactoryConfiguration getInstance(){
-        return factoryConfiguration == null ? new FactoryConfiguration() : factoryConfiguration;
+        return factoryConfiguration == null ? factoryConfiguration =  new FactoryConfiguration() : factoryConfiguration;
     }
     public Session getSession(){
         return sessionFactory.openSession();

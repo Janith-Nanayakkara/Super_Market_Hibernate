@@ -6,10 +6,10 @@ import javax.persistence.Id;
 @Entity
 public class Item {
     @Id
-    private String code;
-    private String description;
-    private double price;
-    private int qty;
+     String code;
+     String description;
+     double price;
+     int qty;
 
     public Item(){
 

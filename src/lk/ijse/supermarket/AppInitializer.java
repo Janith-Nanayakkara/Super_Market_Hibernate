@@ -39,7 +39,7 @@ public class AppInitializer {
 */
 
         transaction.commit();
-        session.close();
+       session.close();
 
     }
 }

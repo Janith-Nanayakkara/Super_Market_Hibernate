@@ -1,5 +1,6 @@
 package lk.ijse.supermarket.util;
 
+import lk.ijse.supermarket.entity.Customer;
 import lk.ijse.supermarket.entity.Item;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,7 +11,7 @@ public class FactoryConfiguration {
     private SessionFactory sessionFactory;
 
     private FactoryConfiguration(){
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(Item.class);
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(Item.class).addAnnotatedClass(Customer.class);
          sessionFactory = configuration.buildSessionFactory();
     }
     public static FactoryConfiguration getInstance(){

@@ -1,7 +1,10 @@
 package lk.ijse.supermarket.entity;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Date;
 
 @Entity
 public class Item {
@@ -10,7 +13,8 @@ public class Item {
      String description;
      double price;
      int qty;
-
+     @CreationTimestamp
+     Date date;
     public Item(){
 
     }

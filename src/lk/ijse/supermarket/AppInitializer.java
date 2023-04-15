@@ -1,5 +1,6 @@
 package lk.ijse.supermarket;
 
+import lk.ijse.supermarket.entity.Customer;
 import lk.ijse.supermarket.entity.Item;
 import lk.ijse.supermarket.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -13,11 +14,17 @@ public class AppInitializer {
         item1.setPrice(100);
         item1.setQty(5);
 
+        Customer c1 = new Customer();
+        c1.setId("C001");
+        c1.setName("Janith");
+        c1.setAddress("Galle");
+        c1.setSalary(45000.00);
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         //save items
-        session.save(item1);
+        session.save(c1);
 
         //update item
         //session.update(item1);

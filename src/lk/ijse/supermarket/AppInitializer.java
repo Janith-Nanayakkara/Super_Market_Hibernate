@@ -1,5 +1,6 @@
 package lk.ijse.supermarket;
 
+import lk.ijse.supermarket.embeded.Name;
 import lk.ijse.supermarket.entity.Customer;
 import lk.ijse.supermarket.entity.Item;
 import lk.ijse.supermarket.util.FactoryConfiguration;
@@ -14,9 +15,15 @@ public class AppInitializer {
         item1.setPrice(100);
         item1.setQty(5);
 
+        Name name = new Name();
+
+        name.setfName("Janith");
+        name.setmName("Induwara");
+        name.setlName("Nanayakakra");
+
         Customer c1 = new Customer();
         c1.setId("C001");
-        c1.setName("Janith");
+        c1.setName(name);
         c1.setAddress("Galle");
         c1.setSalary(45000.00);
 

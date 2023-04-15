@@ -1,5 +1,7 @@
 package lk.ijse.supermarket.entity;
 
+import lk.ijse.supermarket.embeded.Name;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -7,14 +9,14 @@ import javax.persistence.Id;
 public class Customer {
     @Id
      String id ;
-     String name;
+     Name name;
      String address;
      double salary;
 
     public Customer() {
     }
 
-    public Customer(String id, String name, String address, double salary) {
+    public Customer(String id, Name name, String address, double salary) {
         this.setId(id);
         this.setName(name);
         this.setAddress(address);
@@ -29,11 +31,11 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
+    public Name getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(Name name) {
         this.name = name;
     }
 
